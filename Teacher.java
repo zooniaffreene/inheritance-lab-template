@@ -1,16 +1,20 @@
-public class Teacher extends Person{
-    
-    // TODO: Add fields.
+public class Teacher extends Person {
+    private int yearsTeaching;
 
-    public Teacher(String name, int age, String gender)
-    {
+    public Teacher(String name, int age, String gender) {
         super(name, age, gender);
+        yearsTeaching = 0;
     }
 
-    // TODO Add methods
+    public void setYearsTeaching(int years) {
+        yearsTeaching = years;
+    }
 
-    public String toString(){
-        // TODO: improve this.
-        return super.toString() + ", is a teacher!";
+    public int getYearsTeaching() {
+        return yearsTeaching;
+    }
+
+    public String toString() {
+        return super.toString() + ", has taught for " + yearsTeaching + " years";
     }
 }
